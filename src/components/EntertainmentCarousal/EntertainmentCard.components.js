@@ -26,7 +26,7 @@ const EntertainmentCardSlider=()=>{
      "https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-NiBFdmVudHM%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/comedy-shows-collection-202211140440.png"
    ]
    const settings={
-     infinte:true,
+     infinite:true,
      autoplay:false,
      slidesToShow:4,
      slidesToScroll:4,
