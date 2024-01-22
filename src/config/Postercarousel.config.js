@@ -3,7 +3,7 @@ import { NextArrow,PrevArrow } from "../components/Premier/premier.arrow.compone
 const settings = {
   infinte:true,
   autoplay:false,
-  slidesToShow:5,
+  slidesToShow:6,
   slidesToScroll:2,
   InitailSlide:0,
   prevArrow: <PrevArrow />,

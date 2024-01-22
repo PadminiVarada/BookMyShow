@@ -4,11 +4,15 @@ import { SiBookmyshow } from "react-icons/si";
 import CastCardSlider from "../components/CastCarousel/CastCard.component";
 import CrewCardSlider from "../components/CrewCarousel/CrewCard.component";
 
+
+
 const MoviePage=()=>{
   return(
     <>
-      <MovieHero />
-    <div className="my-12 ml-64 px-4 lg:w-1/2 container">
+
+   <MovieHero />
+
+    <div className="my-12 md:ml-16 lg:ml-64 px-4 lg:w-1/2 container">
 
        <div className="flex flex-col items-start gap-3">
          <h2 className="text-grey-800 font-bold text-2xl">About the Movie</h2>

@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
+import axios from "axios";
 import EntertainmentCardSlider from "../components/EntertainmentCarousal/EntertainmentCard.components";
 import Premier from "../components/Premier/premier.components";
 
@@ -8,6 +9,29 @@ import TempPoster from "../config/TempPoster.config";
 
 const HomePage=()=>
 {
+  const [popularMovies,setPopularMovies]= useState([]);
+
+  useEffect(() => {
+    const reqPopularMovies = async () => {
+      const getPopularMovies= await axios.get("/movie/popular");
+      setPopularMovies(getPopularMovies.data.results);
+      };
+    reqPopularMovies();
+}, []);
+console.log({popularMovies});
+
+
+  const [movieUpcoming,setMovieUpcoming]= useState([]);
+
+  useEffect(() => {
+    const reqMovieUpcoming = async () => {
+      const getMovieUpcoming= await axios.get("/movie/upcoming");
+      setMovieUpcoming(getMovieUpcoming.data.results);
+     };
+    reqMovieUpcoming();
+}, []);
+console.log({movieUpcoming});
+
   return (
   <>
   <div className="flex flex-col gap-10">
@@ -26,7 +50,7 @@ const HomePage=()=>
            className="w-full h-full" />
         </div>
       <PosterSlider
-        images={TempPoster}
+        images={popularMovies}
         title="Premiers"
         subtitle="Brand new fashion every Friday"
         isDark />
@@ -36,14 +60,14 @@ const HomePage=()=>
 
   <div className="container mx-auto px-4">
   <PosterSlider
-    images={TempPoster}
+    images={movieUpcoming}
     title="Online Streaming Events"
     isDark={false} />
   </div>
 
   <div className="container mx-auto px-4">
   <PosterSlider
-    images={TempPoster}
+    images={popularMovies}
     title="Outdoor Events"
     isDark={false} />
   </div>

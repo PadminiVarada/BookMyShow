@@ -1,12 +1,14 @@
 import react from "react";
 import { FaThumbsUp } from "react-icons/fa"
 import { BsShare } from "react-icons/bs"
+import LaunchRazorPay from "../../config/RazorPay.config.js";
+
 const MovieHero=()=>{
   return(
    <>
-   <div className="md:hidden" style={{height: "calc(180vw)" }}>
+   <div className="md:hidden">
     <img
-    src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/salaar-cease-fire--part-1-et00301886-1695977970.jpg"
+    src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/salaar-cease-fire--part-1-et00301886-1702971289.jpg"
     alt="poster"
     />
    </div>
@@ -14,7 +16,7 @@ const MovieHero=()=>{
 
    <div className ="hidden md:block lg:hidden">
    <img
-        src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/salaar-cease-fire--part-1-et00301886-1695977970.jpg"
+        src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/salaar-cease-fire--part-1-et00301886-1702971289.jpg"
         alt="poster"
       />
    </div>
@@ -33,7 +35,7 @@ const MovieHero=()=>{
 
        <div className="absolute z-40 w-64 h-full top-16 flex">
      <img
-       src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/salaar-cease-fire--part-1-et00301886-1695977970.jpg"
+       src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/salaar-cease-fire--part-1-et00301886-1702971289.jpg"
        alt="poster"
        className="w-full h-full rounded-xl "
        />
@@ -84,7 +86,7 @@ const MovieHero=()=>{
     </div>
 
     <div className="w-48 h-10 m-3 ml-0 ">
-     <button className="w-full h-full text-white font-bold py-2 bg-red-500 rounded-md">Book tickets</button>
+     <button onClick={LaunchRazorPay} className="w-full h-full text-white font-bold py-2 bg-red-500 rounded-md">Book tickets</button>
     </div>
   </div>
 
@@ -99,10 +101,8 @@ const MovieHero=()=>{
 
   </div>
 
-
-
-    <img
-    src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/salaar-cease-fire--part-1-et00301886-1695977970.jpg"
+   <img
+    src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/salaar-cease-fire--part-1-et00301886-1702971289.jpg"
     alt="poster"
     className="w-full h-full"
    />

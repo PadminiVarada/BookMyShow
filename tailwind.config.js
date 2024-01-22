@@ -5,9 +5,6 @@ module.exports = {
     extend: {
       colors:{
         navCol:
-
-
-
 {
   50: '#f2effc',
   100: '#d6d2e2',
@@ -21,9 +18,7 @@ module.exports = {
   900: '#0e0815',
 }
       }
-
-
-},
+    },
   },
   plugins: [],
 }
